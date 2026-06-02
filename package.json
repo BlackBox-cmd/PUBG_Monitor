@@ -1,0 +1,29 @@
+{
+  "name": "pubg-discord-bot",
+  "version": "1.1.1",
+  "description": "Discord bot for PUBG PC stats, matches and leaderboards",
+  "main": "dist/bot/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/bot/index.js",
+    "dev": "nodemon --watch 'src/**/*' --exec ts-node src/bot/index.ts",
+    "worker": "ts-node src/workers/telemetryWorker.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.16.1",
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2",
+    "ioredis": "^5.11.0",
+    "mongodb": "^7.2.0",
+    "mongoose": "^9.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
