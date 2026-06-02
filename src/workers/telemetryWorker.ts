@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import zlib from 'zlib';
 import { default as redis } from '../lib/cache';
 import pubgClient from '../api/pubgClient';
@@ -114,6 +115,5 @@ export async function startTelemetryWorker() {
   });
 }
 
-if (require.main === module) {
-  startTelemetryWorker().catch((e) => console.error(e));
-}
+// Unconditionally start the telemetry worker when this script is run
+startTelemetryWorker().catch((e) => console.error(e));

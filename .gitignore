@@ -2,3 +2,5 @@ node_modules/
 dist/
 .env
 *.log
+implementation_plan.md
+dead_code_report.md
